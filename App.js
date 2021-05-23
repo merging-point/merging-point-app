@@ -10,6 +10,7 @@ import React, {useState, useRef, useEffect} from 'react';
 import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 import {WebView} from 'react-native-webview';
 import Geolocation from '@react-native-community/geolocation';
+import BackgroundTimer from 'react-native-background-timer';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -34,6 +35,8 @@ const App = () => {
       case 'geolocation':
         handleGeolocation();
         break;
+      case 'background-start':
+        handleGeolocationBackground();
     }
   };
 
@@ -45,6 +48,20 @@ const App = () => {
         setGpsError(true);
       },
     );
+  };
+
+  const handleGeolocationBackground = () => {
+    BackgroundTimer.runBackgroundTimer(() => {
+      Geolocation.getCurrentPosition(
+        info => {
+          const {latitude, longitude} = info.coords;
+          console.log(latitude, longitude);
+        },
+        () => {
+          console.log('error');
+        },
+      );
+    }, 3000);
   };
 
   useEffect(() => {
