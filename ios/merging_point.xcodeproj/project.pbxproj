@@ -14,6 +14,7 @@
 		2ACCA033356566669CF284B4 /* libPods-merging_point-merging_pointTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F016EB8A0231137A490D20E2 /* libPods-merging_point-merging_pointTests.a */; };
 		56275BE72659F2F2001CC15C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56275BE62659F2F2001CC15C /* NotificationService.swift */; };
 		56275BEB2659F2F2001CC15C /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 56275BE42659F2F2001CC15C /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		56DB305087D03F9E0873228A /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9F1BB8C2F4379D40DEB161 /* libPods-OneSignalNotificationServiceExtension.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A5E26E6B936170C181C0F9D9 /* libPods-merging_point.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 246A26B607C8EFB555BF7065 /* libPods-merging_point.a */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,9 @@
 		7EF458E8A0BB7211E46305C0 /* Pods-merging_point.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-merging_point.debug.xcconfig"; path = "Target Support Files/Pods-merging_point/Pods-merging_point.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = merging_point/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CB6825DE192FCBE8C1135D2 /* Pods-merging_point.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-merging_point.release.xcconfig"; path = "Target Support Files/Pods-merging_point/Pods-merging_point.release.xcconfig"; sourceTree = "<group>"; };
+		AC2D1BB6C7FD45274F6F81E9 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		AF9F1BB8C2F4379D40DEB161 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB71756D977274F61028EAD /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		D7ADB4341BC1230AECF2C4FA /* Pods-merging_point-merging_pointTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-merging_point-merging_pointTests.release.xcconfig"; path = "Target Support Files/Pods-merging_point-merging_pointTests/Pods-merging_point-merging_pointTests.release.xcconfig"; sourceTree = "<group>"; };
 		E6B0F36418C18317F4BD1E95 /* Pods-merging_point-merging_pointTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-merging_point-merging_pointTests.debug.xcconfig"; path = "Target Support Files/Pods-merging_point-merging_pointTests/Pods-merging_point-merging_pointTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -95,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56DB305087D03F9E0873228A /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +143,7 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				246A26B607C8EFB555BF7065 /* libPods-merging_point.a */,
 				F016EB8A0231137A490D20E2 /* libPods-merging_point-merging_pointTests.a */,
+				AF9F1BB8C2F4379D40DEB161 /* libPods-OneSignalNotificationServiceExtension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,6 +165,8 @@
 				8CB6825DE192FCBE8C1135D2 /* Pods-merging_point.release.xcconfig */,
 				E6B0F36418C18317F4BD1E95 /* Pods-merging_point-merging_pointTests.debug.xcconfig */,
 				D7ADB4341BC1230AECF2C4FA /* Pods-merging_point-merging_pointTests.release.xcconfig */,
+				AC2D1BB6C7FD45274F6F81E9 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				CEB71756D977274F61028EAD /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -248,6 +256,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56275BEC2659F2F2001CC15C /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
 			buildPhases = (
+				541F08FEB2C5761678F3A75F /* [CP] Check Pods Manifest.lock */,
 				56275BE02659F2F2001CC15C /* Sources */,
 				56275BE12659F2F2001CC15C /* Frameworks */,
 				56275BE22659F2F2001CC15C /* Resources */,
@@ -342,6 +351,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+		};
+		541F08FEB2C5761678F3A75F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 		A558E15C5991B9A780D2D3D5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -523,6 +554,7 @@
 			baseConfigurationReference = E6B0F36418C18317F4BD1E95 /* Pods-merging_point-merging_pointTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8WNR3BTVZT;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -551,6 +583,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 8WNR3BTVZT;
 				INFOPLIST_FILE = merging_pointTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -627,6 +660,7 @@
 		};
 		56275BED2659F2F2001CC15C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC2D1BB6C7FD45274F6F81E9 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -660,6 +694,7 @@
 		};
 		56275BEE2659F2F2001CC15C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEB71756D977274F61028EAD /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
