@@ -11,12 +11,63 @@ import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 import {WebView} from 'react-native-webview';
 import Geolocation from '@react-native-community/geolocation';
 import BackgroundTimer from 'react-native-background-timer';
+import OneSignal from 'react-native-onesignal';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
   const WebViewRef = useRef();
   const [myLocation, setMyLocation] = useState({lat: 0, lng: 0});
   const [gpsError, setGpsError] = useState<boolean>(false);
+  const [isSubscribed, setIsSubscribed] = useState<boolean>(false);
+
+  useEffect(() => {
+    const oneSignalInit = async () => {
+      /* O N E S I G N A L   S E T U P */
+      OneSignal.setLogLevel(6, 0);
+      OneSignal.setAppId('7527665b-46b9-418b-8a18-ae8adb120a9b');
+
+      OneSignal.promptForPushNotificationsWithUserResponse(response => {
+        console.log('Prompt response:', response);
+      });
+      OneSignal.setNotificationWillShowInForegroundHandler(
+        notificationReceivedEvent => {
+          console.log(
+            'OneSignal: notification will show in foreground:',
+            notificationReceivedEvent,
+          );
+          let notification = notificationReceivedEvent.getNotification();
+          console.log('notification: ', notification);
+          const data = notification.additionalData;
+          console.log('additionalData: ', data);
+          const button1 = {
+            text: 'Cancel',
+            onPress: () => {
+              notificationReceivedEvent.complete();
+            },
+            style: 'cancel',
+          };
+          const button2 = {
+            text: 'Complete',
+            onPress: () => {
+              notificationReceivedEvent.complete(notification);
+            },
+          };
+          Alert.alert('Complete notification?', 'Test', [button1, button2], {
+            cancelable: true,
+          });
+        },
+      );
+
+      OneSignal.setNotificationOpenedHandler(notification => {
+        console.log('OneSignal: notification opened:', notification);
+      });
+      const deviceState = await OneSignal.getDeviceState();
+
+      setIsSubscribed(deviceState.isSubscribed);
+    };
+
+    oneSignalInit();
+  });
 
   const postMessage = (type, data) =>
     WebViewRef.current?.postMessage(
